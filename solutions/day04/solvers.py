@@ -53,25 +53,3 @@ def part2(cards):
         process_card(i)
     
     return sum(counts.values())
-
-
-def part2_old(cards):
-    
-    # Keep a count of all cards, either original or won. Start with a count of
-    # 1 for each original card.
-    counts = {i: 1 for i in range(len(cards))}
-    
-    def process_card(index):
-        
-        winning_numbers, present_numbers = cards[index]
-        matches = len(winning_numbers & present_numbers)
-        
-        for i in range(matches):
-            j = index + i + 1
-            counts[j] += 1
-            process_card(j)
-    
-    for i in range(len(cards)):
-        process_card(i)
-    
-    return sum(counts.values())
