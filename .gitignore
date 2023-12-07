@@ -2,3 +2,7 @@
 
 .venv/
 joggerenv.cfg
+
+# Ignore puzzle inputs
+# https://adventofcode.com/about#faq_copying
+solutions/day??/input
